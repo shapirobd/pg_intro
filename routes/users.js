@@ -26,7 +26,6 @@ router.get("/search", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
 	try {
-		console.log(req.body);
 		const { name, type } = req.body;
 		const results = await db.query(
 			"INSERT INTO users (name, type) VALUES ($1, $2)",
